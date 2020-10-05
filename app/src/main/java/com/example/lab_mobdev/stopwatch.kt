@@ -33,6 +33,10 @@ class stopwatch : AppCompatActivity() {
             stopwatchReset()
         }
 
+        exit.setOnClickListener {
+            stopwatchExit()
+        }
+
     }
     fun stopwatchStart(){
         stopwatchOn=true
@@ -91,7 +95,7 @@ class stopwatch : AppCompatActivity() {
     override fun onBackPressed() {
         val toast = Toast.makeText(
             applicationContext,
-            "Please exit app via exit button:)",
+            "Please exit by pressing exit button:)",
             Toast.LENGTH_SHORT
         )
         toast.show()
